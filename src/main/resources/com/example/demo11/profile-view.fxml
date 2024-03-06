@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo11.UsersViewController">
+    <children>
+        <TextField fx:id="nameField" layoutX="10" layoutY="10" prefWidth="150" promptText="Nume" />
+        <TextField fx:id="surnameField" layoutX="10" layoutY="40" prefColumnCount="15" prefWidth="150" promptText="Prenume" />
+
+        <TableView fx:id="friendsTable" layoutX="10" layoutY="80" prefHeight="164.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Nume" />
+                <TableColumn fx:id="surnameColumn" text="Prenume" />
+            </columns>
+        </TableView>
+        <TableView fx:id="usersTable" layoutX="304.0" layoutY="80.0" prefHeight="164.0" prefWidth="307.0">
+            <columns>
+                <TableColumn fx:id="nameColumnUser" text="Nume" />
+                <TableColumn fx:id="surnameColumnUser" text="Prenume" />
+            </columns>
+        </TableView>
+
+        <TableView fx:id="inviteTable" layoutX="10" layoutY="240" prefHeight="398.0" prefWidth="745.0">
+            <columns>
+                <TableColumn fx:id="invitationColumn" prefWidth="200.0" text="Invitație de Prietenie">
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnSendInvite" layoutX="170.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSendInvite" text="Send Invite" />
+              <Button fx:id="btnCancelInvite" layoutX="250.0" layoutY="28.0" onAction="#handleCancelInvite">
+                                    Cancel Invite
+                                </Button>
+              <Button fx:id="btnAcceptInvite" layoutX="340.0" layoutY="28.0" onAction="#handleAcceptInvite" text="Accept Invite">
+                                    Accept Invite
+                                </Button>
+        <HBox layoutX="500.0" layoutY="40.0" spacing="35">
+            <Label text="Număr pagina:" />
+            <Button onAction="#handlePreviousPage" text="Previous" />
+            <Button onAction="#handleNextPage" text="Next" />
+        </HBox>
+
+        <HBox layoutX="500.0" spacing="10">
+            <Label text="Număr de randuri: " />
+            <TextField fx:id="textFieldRanduriPagina" />
+        </HBox>
+    </children>
+</AnchorPane>
